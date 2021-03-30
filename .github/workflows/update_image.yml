@@ -3,7 +3,7 @@ name: update_image
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '30 0 * * *'
+    - cron:  '30 1 * * *'
   workflow_dispatch:
 
 jobs:
@@ -11,9 +11,10 @@ jobs:
   # when a job name is not provided
   update_image:
     # Name the Job
-    name: update image from bing.com everyday
+    name: update image from bing.com
     # Set the type of machine to run on
     runs-on: macos-latest
+    timeout-minutes: 2
 
     steps:
       # Checks out a copy of your repository
@@ -23,5 +24,5 @@ jobs:
         run: ./bing-wallpaper.sh -p images
       - uses: EndBug/add-and-commit@v7
         with:
-          message: 'update image from bing.com everyday'
+          message: 'update image from bing.com'
           add: '*.jpg'
