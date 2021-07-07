@@ -11,10 +11,7 @@ def main():
     print('start fetching...')
     page_src = urllib.request.urlopen(bing_index_url).read()
 
-    href_m = re.search(r"""<link id="bgLink".+?href="(.+?)".+?>""", str(page_src))
-    if href_m is None:
-        return
-
+    href_m = re.search(r"""<link .+?href="(/th.+?)".+?>""", str(page_src))
     href = href_m.group(1)
     print('href', href)
 
