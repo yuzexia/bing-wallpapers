@@ -5,9 +5,10 @@ import os
 
 root_dir = os.path.dirname(__file__)
 
-bing_index_url = 'https://cn.bing.com/'
+bing_index_url = 'https://www.bing.com/'
 
 def main():
+    print('start fetching...')
     page_src = urllib.request.urlopen(bing_index_url).read()
 
     href_m = re.search(r"""<link id="bgLink".+?href="(.+?)".+?>""", str(page_src))
