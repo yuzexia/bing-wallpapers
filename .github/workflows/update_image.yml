@@ -14,7 +14,7 @@ jobs:
     name: update image from bing.com
     # Set the type of machine to run on
     runs-on: ubuntu-20.04
-    timeout-minutes: 1
+    timeout-minutes: 5
 
     steps:
       # Checks out a copy of your repository
