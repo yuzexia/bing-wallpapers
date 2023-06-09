@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v3
       - name: fetch an image from bing.com
         run: ./bing-wallpaper.py
-      - uses: EndBug/add-and-commit@v8
+      - uses: EndBug/add-and-commit@v9
         with:
           message: 'update image from bing.com'
           add: '*.jpg'
