@@ -19,7 +19,7 @@ jobs:
     steps:
       # Checks out a copy of your repository
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: fetch an image from bing.com
         run: ./bing-wallpaper.py
       - uses: EndBug/add-and-commit@v8
