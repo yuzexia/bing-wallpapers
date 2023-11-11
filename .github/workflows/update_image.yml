@@ -19,12 +19,12 @@ jobs:
     steps:
       # Set up Node.js
       - name: Set up Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v2.5.2
         with:
           node-version: '16'
       # Checks out a copy of your repository
       - name: Checkout code
-        uses: actions/checkout@v2.5.0
+        uses: actions/checkout@v2.6.0
       - name: fetch an image from bing.com
         run: ./bing-wallpaper.py
       - uses: EndBug/add-and-commit@v9
